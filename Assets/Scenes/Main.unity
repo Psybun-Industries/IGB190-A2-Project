@@ -21269,15 +21269,15 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   colorFade: {r: 0, g: 0, b: 0, a: 0}
   unitName: Barbarian
-  baseDamage: 20
-  baseAttacksPerSecond: 1.5
+  baseDamage: 30
+  baseAttacksPerSecond: 2
   baseMaxHealth: 200
   baseMaxResource: 100
-  baseMovementSpeed: 3
+  baseMovementSpeed: 4
   baseArmor: 0
-  baseCriticalStrikeChance: 0.1
+  baseCriticalStrikeChance: 0.225
   baseCriticalStrikeDamage: 1.5
-  baseHealthRegen: 20
+  baseHealthRegen: 10
   baseResourceRegen: 0
   baseAttackRange: 2.5
   health: 500
@@ -43481,7 +43481,7 @@ MonoBehaviour:
   _empoweredMonsterValues:
     empoweredMonsterHealthModifier: 2
     empoweredMonsterDamageModifier: 2
-    empoweredMonsterAttackSpeedModifier: 1
+    empoweredMonsterAttackSpeedModifier: 1.2
     empoweredMonsterXPModifier: 5
     empoweredMonsterGoldModifier: 3
     empoweredMonsterCommonDropChance: 1

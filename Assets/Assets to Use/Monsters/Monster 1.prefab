@@ -86,17 +86,17 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   colorFade: {r: 0, g: 0, b: 0, a: 0}
   unitName: Monster 1
-  baseDamage: 10
-  baseAttacksPerSecond: 2
-  baseMaxHealth: 200
+  baseDamage: 20
+  baseAttacksPerSecond: 1.2
+  baseMaxHealth: 100
   baseMaxResource: 100
-  baseMovementSpeed: 1
+  baseMovementSpeed: 0.8
   baseArmor: 0
-  baseCriticalStrikeChance: 0
-  baseCriticalStrikeDamage: 2
+  baseCriticalStrikeChance: 0.05
+  baseCriticalStrikeDamage: 1.5
   baseHealthRegen: 0
   baseResourceRegen: 0
-  baseAttackRange: 2.2
+  baseAttackRange: 1.8
   health: 100
   resource: 0
   abilities:
@@ -131,7 +131,7 @@ MonoBehaviour:
   uiSize: 1
   uiHeight: 1.7
   spawnLevel: 1
-  spawnLikelihood: 10
+  spawnLikelihood: 0
 --- !u!65 &1408620102498460199
 BoxCollider:
   m_ObjectHideFlags: 0
