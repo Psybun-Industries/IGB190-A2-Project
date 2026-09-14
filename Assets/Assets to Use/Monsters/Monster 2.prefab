@@ -105,9 +105,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1391696739608001583}
+  - component: {fileID: 1649265759049038220}
   - component: {fileID: 5207088347721001449}
   - component: {fileID: 487011462849581899}
-  - component: {fileID: 1649265759049038220}
   - component: {fileID: 3687309128071325144}
   - component: {fileID: -2174882988543051095}
   - component: {fileID: -2091711783338139730}
@@ -135,6 +135,68 @@ Transform:
   - {fileID: 6478126787607965134}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1649265759049038220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7089410253440013145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a25dff70c664a840943179529e649fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  color: {r: 0, g: 0, b: 0, a: 0}
+  colorFade: {r: 0, g: 0, b: 0, a: 0}
+  unitName: Monster 2
+  baseDamage: 10
+  baseAttacksPerSecond: 1
+  baseMaxHealth: 100
+  baseMaxResource: 100
+  baseMovementSpeed: 1
+  baseArmor: 0
+  baseCriticalStrikeChance: 0
+  baseCriticalStrikeDamage: 2
+  baseHealthRegen: 0
+  baseResourceRegen: 0
+  baseAttackRange: 1.5
+  health: 100
+  resource: 0
+  abilities:
+  - {fileID: 11400000, guid: 78a26e0a386159c468fb4ad26178fd34, type: 2}
+  lastAbilityCast: {fileID: 0}
+  unitCanBeForceMoved: 1
+  handPoint: {fileID: 0}
+  onDeathFeedback: {fileID: 11400000, guid: 84adead40393a4e4582f15d95dba0ac6, type: 2}
+  onHitFeedback: {fileID: 11400000, guid: 51eb79cf66c4e5447a2f14bf112f7d1b, type: 2}
+  origin: {fileID: 5660631406730305671}
+  castPoint: {fileID: 1889840250625050008}
+  head: {fileID: 3101247529339065740}
+  center: {fileID: 5201237198257553744}
+  leftHand: {fileID: 1889840250625044774}
+  rightHand: {fileID: 1889840250625050008}
+  custom1: {fileID: 0}
+  custom2: {fileID: 0}
+  custom3: {fileID: 0}
+  target: {fileID: 0}
+  animator: {fileID: 0}
+  isDead: 0
+  forceMoveResetStoppingDistance: 0
+  isForceMoving: 0
+  forceMoveLocation: {x: 0, y: 0, z: 0}
+  spawnEffect: {fileID: 4062287519753572544, guid: 332ddaa5f7738b142ac986212c018770, type: 3}
+  goldModifier: 1
+  experienceModifier: 1
+  corpseDuration: 3.5
+  monsterLabel: 
+  isEmpowered: 0
+  healthBarType: 0
+  uiSize: 1
+  uiHeight: 2
+  spawnLevel: 1
+  spawnLikelihood: 0
 --- !u!65 &5207088347721001449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -178,68 +240,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1649265759049038220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7089410253440013145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a25dff70c664a840943179529e649fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outline: {fileID: 0}
-  color: {r: 0, g: 0, b: 0, a: 0}
-  colorFade: {r: 0, g: 0, b: 0, a: 0}
-  unitName: Monster 2
-  baseDamage: 10
-  baseAttacksPerSecond: 2
-  baseMaxHealth: 200
-  baseMaxResource: 100
-  baseMovementSpeed: 1
-  baseArmor: 0
-  baseCriticalStrikeChance: 0
-  baseCriticalStrikeDamage: 2
-  baseHealthRegen: 0
-  baseResourceRegen: 0
-  baseAttackRange: 2.2
-  health: 100
-  resource: 0
-  abilities:
-  - {fileID: 11400000, guid: 78a26e0a386159c468fb4ad26178fd34, type: 2}
-  lastAbilityCast: {fileID: 0}
-  unitCanBeForceMoved: 1
-  handPoint: {fileID: 0}
-  onDeathFeedback: {fileID: 11400000, guid: 84adead40393a4e4582f15d95dba0ac6, type: 2}
-  onHitFeedback: {fileID: 11400000, guid: 51eb79cf66c4e5447a2f14bf112f7d1b, type: 2}
-  origin: {fileID: 5660631406730305671}
-  castPoint: {fileID: 1889840250625050008}
-  head: {fileID: 3101247529339065740}
-  center: {fileID: 5201237198257553744}
-  leftHand: {fileID: 1889840250625044774}
-  rightHand: {fileID: 1889840250625050008}
-  custom1: {fileID: 0}
-  custom2: {fileID: 0}
-  custom3: {fileID: 0}
-  target: {fileID: 0}
-  animator: {fileID: 0}
-  isDead: 0
-  forceMoveResetStoppingDistance: 0
-  isForceMoving: 0
-  forceMoveLocation: {x: 0, y: 0, z: 0}
-  spawnEffect: {fileID: 4062287519753572544, guid: 332ddaa5f7738b142ac986212c018770, type: 3}
-  goldModifier: 1
-  experienceModifier: 1
-  corpseDuration: 3.5
-  monsterLabel: 
-  isEmpowered: 0
-  healthBarType: 0
-  uiSize: 1
-  uiHeight: 2
-  spawnLevel: 1
-  spawnLikelihood: 10
 --- !u!54 &3687309128071325144
 Rigidbody:
   m_ObjectHideFlags: 0
