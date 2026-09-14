@@ -215,7 +215,17 @@ public class Unit : Interactable
         // Apply damage modifiers (e.g. a -50% damage taken buff).
         amount *= GetBaseDamageTakenModifier();
 
+        //Randomise damage to a group
+        const float randomFactor = 0.05f;
+        amount *= (1 + Random.Range(-randomFactor, randomFactor));
+
         // Armor currently doesn't do anything? Add logic here.
+        float armor = stats[Stat.Armor].GetValue();
+        float constant = 100f; // Chooses your value here.
+        float scalingFactor = 1.5f; // Choose your value here
+        amount = amount * (1.0f / (1.0f + Mathf.Pow(armor / constant, scalingFactor)));
+
+
 
         // Return the modified amount.
         return amount;
