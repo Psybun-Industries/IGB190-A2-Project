@@ -14,24 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LogicContainer
   engine:
     scripts:
-    - scriptName: Main
-      scriptUID: 1588906604
-      hasWait: 0
-      reportErrors: 1
-      eventNodes:
-      - rid: 6501859941773213771
-      conditionNodes: []
-      actionNodes: []
     - scriptName: Payday
       scriptUID: 1635761578
       hasWait: 0
       reportErrors: 1
       eventNodes:
       - rid: 1000
-      conditionNodes:
-      - rid: 1004
+      conditionNodes: []
       actionNodes:
       - rid: 1002
+      - rid: 1004
   references:
     version: 2
     RefIds:
@@ -168,16 +160,18 @@ MonoBehaviour:
         allowFunction: 1
         value: 5000
     - rid: 1004
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: KeyIsHeld
-        functionDescription: Input/Key is Held
-        functionDynamicDescription: $ $ Held
+        functionName: ShowStatusMessage
+        functionDescription: UI Actions/Show In-World Status Message
+        functionDynamicDescription: Show a status message at $ with color $ printing
+          $
         functionEvaluators:
         - rid: 1005
         - rid: 1006
+        - rid: 1007
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -185,16 +179,15 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Keyboard
+        nodeIcon: UI
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0
     - rid: 1005
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: 
+        tempName: Location
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -208,59 +201,14 @@ MonoBehaviour:
         stringSuffix: 
         nodeIcon: 
         allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Space
-        options:
-        - A
-        - B
-        - C
-        - D
-        - E
-        - F
-        - G
-        - H
-        - I
-        - J
-        - K
-        - L
-        - M
-        - N
-        - O
-        - P
-        - Q
-        - R
-        - S
-        - T
-        - U
-        - V
-        - W
-        - X
-        - Y
-        - Z
-        - F1
-        - F2
-        - F3
-        - F4
-        - F5
-        - F6
-        - F7
-        - F8
-        - F9
-        - F10
-        - F11
-        - F12
-        - Tab
-        - Escape
-        - LeftShift
-        - LeftAlt
-        - LeftControl
-        - Space
+        allowPreset: 1
+        allowFunction: 1
+        value: {x: 0, y: 0, z: 0}
     - rid: 1006
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      type: {class: ColorNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: 
+        tempName: Color
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -274,30 +222,28 @@ MonoBehaviour:
         stringSuffix: 
         nodeIcon: 
         allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Is
-        options:
-        - Is
-        - Is Not
-    - rid: 6501859941773213771
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+        allowPreset: 1
+        allowFunction: 1
+        value: {r: 0.8679245, g: 0.7085331, b: 0, a: 1}
+    - rid: 1007
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 2
-        tempName: 
-        functionName: ScriptLoaded
-        functionDescription: Time/On script loaded
-        functionDynamicDescription: On script loaded
+        returnType: 0
+        tempName: Message
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: -2
-        parentNodeID: -1
+          rid: 1004
+        parentNodeID: 2
         indent: 0
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Timer
+        nodeIcon: 
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        presets: []
+        value: Payday!
+        options: []
