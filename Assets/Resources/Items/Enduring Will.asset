@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Enduring Will
   m_EditorClassIdentifier: Assembly-CSharp::Item
   itemDescription: Cloak
-  itemTag: 
+  itemTag: Shadow
   itemFlavourText: This cloak was woven with the magic too wrap the shadows around
     oneself.
   classRequirement: 
@@ -69,7 +69,8 @@ MonoBehaviour:
       reportErrors: 1
       eventNodes:
       - rid: 6501860414014619738
-      conditionNodes: []
+      conditionNodes:
+      - rid: 1000
       actionNodes: []
     - scriptName: Item Unequipped
       scriptUID: 1631907341
@@ -84,6 +85,74 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 1000
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: PlayerHasItemEquipped
+        functionDescription: Player/Player Has Item Equipped
+        functionDynamicDescription: Player $ $ equipped
+        functionEvaluators:
+        - rid: 1001
+        - rid: 1002
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 1001
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1000
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Has
+        options:
+        - Has
+        - Does Not Have
+    - rid: 1002
+      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Item
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1000
+        parentNodeID: 1
+        indent: 0
+        presetName: This Item
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 11400000, guid: f77132c3934126944a0f0f7c0a836c76, type: 2}
     - rid: 6501860414014619738
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
