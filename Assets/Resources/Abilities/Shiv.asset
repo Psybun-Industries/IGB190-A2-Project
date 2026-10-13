@@ -15,7 +15,7 @@ MonoBehaviour:
   engine:
     rid: 6501860100278321231
   abilityFlavourText: A quick poke to the kidneys
-  abilityIcon: {fileID: 21300000, guid: 7952f6ff49298fd44a3cf9954c4102cf, type: 3}
+  abilityIcon: {fileID: 21300000, guid: 53814500238acfc409a9e2f8f4b890c2, type: 3}
   targetMode: 3
   abilityDescription: Stab towards the target unit, dealing 100% attack damage.
   abilityAnimation: Custom1
