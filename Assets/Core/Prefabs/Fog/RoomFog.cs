@@ -11,7 +11,7 @@ public class RoomFog : MonoBehaviour
         obj.transform.localScale = Vector3.one;
         int size = Mathf.RoundToInt(transform.localScale.x * transform.localScale.z);
         var system = obj.GetComponent<ParticleSystem>().emission;
-        system.rateOverTime = size / 40.0f;
+        system.rateOverTime = size / 80.0f;
 
         obj.GetComponent<ParticleSystem>().Clear();
         obj.GetComponent<ParticleSystem>().Stop();
