@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LogicContainer
   engine:
     scripts:
-    - scriptName: Main
+    - scriptName: Start Quest
       scriptUID: 1821791177
       hasWait: 0
       reportErrors: 1

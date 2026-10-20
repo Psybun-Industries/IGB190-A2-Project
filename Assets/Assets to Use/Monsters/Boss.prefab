@@ -224,11 +224,11 @@ MonoBehaviour:
   colorFade: {r: 0, g: 0, b: 0, a: 0}
   unitName: Boss
   baseDamage: 30
-  baseAttacksPerSecond: 2
-  baseMaxHealth: 600
-  baseMaxResource: 100
-  baseMovementSpeed: 2
-  baseArmor: 0
+  baseAttacksPerSecond: 1.5
+  baseMaxHealth: 2500
+  baseMaxResource: 200
+  baseMovementSpeed: 3
+  baseArmor: 1.5
   baseCriticalStrikeChance: 0.2
   baseCriticalStrikeDamage: 2
   baseHealthRegen: 0
@@ -237,7 +237,6 @@ MonoBehaviour:
   health: 100
   resource: 0
   abilities:
-  - {fileID: 11400000, guid: 7f5a643269b552c4586bd9cabd56b69e, type: 2}
   - {fileID: 11400000, guid: 78a26e0a386159c468fb4ad26178fd34, type: 2}
   lastAbilityCast: {fileID: 0}
   unitCanBeForceMoved: 1
@@ -265,7 +264,7 @@ MonoBehaviour:
   corpseDuration: 60
   monsterLabel: Boss
   isEmpowered: 1
-  healthBarType: 1
+  healthBarType: 2
   uiSize: 3.6
   uiHeight: 2
   spawnLevel: 1
