@@ -1,1 +1,5 @@
-1.0
+1.1
+
+- Made some minor updates.
+- Fixed some typos.
+- Added some other logic.

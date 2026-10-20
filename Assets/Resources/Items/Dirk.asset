@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Simple Gold Chain
+  m_Name: Dirk
   m_EditorClassIdentifier: Assembly-CSharp::Item
   itemDescription: 
   itemTag: 
   itemFlavourText: 
   classRequirement: 
-  itemIcon: {fileID: 21300000, guid: 70eac250aadcaa5419d2e54e1e0851ce, type: 3}
-  itemType: 1
+  itemIcon: {fileID: 21300000, guid: 63bbf1e1658caa346b0e6300b0209f45, type: 3}
+  itemType: 2
   itemRarity: 0
-  itemCost: 120
+  itemCost: 150
   itemSet: {fileID: 0}
-  randomStatCount: 2
+  randomStatCount: 1
   guaranteedStats: []
   randomisableStats:
-  - stat: 1
+  - stat: 0
     minimum: 0.01
     maximum: 0.02
     isPercent: 1
@@ -32,42 +32,10 @@ MonoBehaviour:
     minimum: 0.01
     maximum: 0.03
     isPercent: 1
-  - stat: 4
-    minimum: 0.01
-    maximum: 0.02
-    isPercent: 1
   - stat: 0
-    minimum: 0.01
-    maximum: 0.02
-    isPercent: 1
-  - stat: 5
-    minimum: 0.01
-    maximum: 0.03
-    isPercent: 1
-  - stat: 7
-    minimum: 0.01
-    maximum: 0.03
-    isPercent: 1
-  - stat: 6
-    minimum: 0.01
-    maximum: 0.03
-    isPercent: 1
-  - stat: 8
-    minimum: 0.01
-    maximum: 0.02
-    isPercent: 1
-  - stat: 10
-    minimum: 0.01
-    maximum: 0.03
+    minimum: 1
+    maximum: 2
     isPercent: 0
-  - stat: 11
-    minimum: 0.01
-    maximum: 0.02
-    isPercent: 0
-  - stat: 12
-    minimum: 0.01
-    maximum: 0.03
-    isPercent: 1
   minimumDropLevel: 0
   canPurchaseInShop: 1
   canDropOffMonster: 1
@@ -75,19 +43,19 @@ MonoBehaviour:
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 1638263110
+      scriptUID: 295233947
       hasWait: 0
       reportErrors: 1
       eventNodes:
-      - rid: 6501860414014619736
+      - rid: 5603467790985986066
       conditionNodes: []
       actionNodes: []
     - scriptName: Item Unequipped
-      scriptUID: 1882550638
+      scriptUID: 1860116766
       hasWait: 0
       reportErrors: 1
       eventNodes:
-      - rid: 6501860414014619737
+      - rid: 5603467790985986067
       conditionNodes: []
       actionNodes: []
   references:
@@ -95,7 +63,7 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 6501860414014619736
+    - rid: 5603467790985986066
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -116,7 +84,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 6501860414014619737
+    - rid: 5603467790985986067
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
