@@ -182,11 +182,11 @@ Material:
     - AccentGlobeColor: {r: 1, g: 1, b: 1, a: 1}
     - EdgeGlobeColor: {r: 1, g: 1, b: 1, a: 1}
     - MainGlobeColor: {r: 0.8867924, g: 0.15477037, b: 0.15477037, a: 1}
-    - _AccentGlobeColor: {r: 1, g: 1, b: 1, a: 1}
+    - _AccentGlobeColor: {r: 1, g: 0.83470595, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EdgeGlobeColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EdgeGlobeColor: {r: 1, g: 0.8352942, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _MainGlobeColor: {r: 0.83137256, g: 0.48189142, b: 0.21568625, a: 1}
+    - _MainGlobeColor: {r: 0.8, g: 0.4258462, b: 0.16, a: 1}
     - _TintRGBA_Color_1: {r: 0.24528302, g: 0.82116497, b: 0.9811321, a: 1}
     - _TintRGBA_Color_2: {r: 1, g: 0.007843138, b: 0, a: 1}
     - _TintRGBA_Color_3: {r: 0.6037736, g: 0.4453882, b: 0.26486292, a: 0.972549}

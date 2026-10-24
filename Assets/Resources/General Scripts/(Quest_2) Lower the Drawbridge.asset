@@ -500,13 +500,13 @@ MonoBehaviour:
     - rid: 1021
       type: {class: ItemNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 2
+        returnType: 0
         tempName: Item
         functionName: RandomItemOfRarity
         functionDescription: Random Item of Rarity
         functionDynamicDescription: Random $ Item
         functionEvaluators:
-        - rid: 1023
+        - rid: 1026
         parentNode:
           rid: 1020
         parentNodeID: 0
@@ -518,7 +518,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 11400000, guid: 4eb655a1b9dc747478c44475b9a5eef0, type: 2}
+        value: {fileID: 11400000, guid: f89e3d06be35db149b795c7291809144, type: 2}
     - rid: 1022
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -541,31 +541,6 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 1023
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Common
-        options:
-        - Common
-        - Rare
-        - Legendary
     - rid: 1024
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
@@ -610,6 +585,31 @@ MonoBehaviour:
         allowFunction: 1
         value: Lower the Drawbridge
         options: []
+    - rid: 1026
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Common
+        options:
+        - Common
+        - Rare
+        - Legendary
     - rid: 1028
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:

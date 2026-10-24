@@ -21,8 +21,8 @@ MonoBehaviour:
   abilityAnimation: One Hand Slash
   range: 8
   castTime: 2
-  abilityCooldown: 20
-  abilityCost: 0
+  abilityCooldown: 30
+  abilityCost: 50
   movementLock: 1
   animationActivationPosition: 0.5
   canMoveWhileCasting: 0

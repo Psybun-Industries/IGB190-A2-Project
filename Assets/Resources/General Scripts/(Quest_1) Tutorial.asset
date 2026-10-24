@@ -51,7 +51,7 @@ MonoBehaviour:
       - rid: 1029
       - rid: 1032
       - rid: 1034
-      - rid: 1037
+      - rid: 1111
     - scriptName: Tutorial Finish Actions
       scriptUID: 264128841
       hasWait: 0
@@ -65,6 +65,7 @@ MonoBehaviour:
       - rid: 1094
       - rid: 1099
       - rid: 1092
+      - rid: 1116
       - rid: 1050
     - scriptName: Pick Up Item Prompt
       scriptUID: 1745236338
@@ -73,7 +74,7 @@ MonoBehaviour:
       eventNodes:
       - rid: 1068
       conditionNodes:
-      - rid: 1073
+      - rid: 1041
       actionNodes:
       - rid: 1076
       - rid: 1080
@@ -83,7 +84,8 @@ MonoBehaviour:
       reportErrors: 1
       eventNodes:
       - rid: 1081
-      conditionNodes: []
+      conditionNodes:
+      - rid: 1073
       actionNodes:
       - rid: 1082
       - rid: 1085
@@ -107,7 +109,6 @@ MonoBehaviour:
       - rid: 1149
       - rid: 1113
       - rid: 1071
-      - rid: 1111
   references:
     version: 2
     RefIds:
@@ -155,7 +156,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: You find yourself alone in the antechamber of a massive chasm.
+        value: You find yourself alone in the antechamber of a massive cavern.
         options: []
     - rid: 1002
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
@@ -644,8 +645,8 @@ MonoBehaviour:
       data:
         returnType: 2
         tempName: Location
-        functionName: RandomPointNearUnit
-        functionDescription: Random/Random Point Near Unit
+        functionName: RandomPointNearPoint
+        functionDescription: Random/Random Point Near Point
         functionDynamicDescription: Random point within $ of $
         functionEvaluators:
         - rid: 1025
@@ -682,12 +683,12 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 5
+        value: 3
     - rid: 1026
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 4
-        tempName: Unit
+        returnType: 0
+        tempName: Location
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -696,14 +697,14 @@ MonoBehaviour:
           rid: -2
         parentNodeID: -1
         indent: 0
-        presetName: Player
+        presetName: 
         variableName: 
         stringSuffix: 
         nodeIcon: 
-        allowValue: 0
+        allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 0}
+        value: {x: 3.75, y: -2.5, z: 20}
     - rid: 1027
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -921,19 +922,17 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 9999
-    - rid: 1037
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+    - rid: 1041
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: SpawnEmpoweredUnits
-        functionDescription: Unit/Spawn/Spawn Empowered Unit(s)
-        functionDynamicDescription: Spawn $ empowered $ for $ faction at $
+        functionName: AndComparison
+        functionDescription: Comparisons/And Comparison
+        functionDynamicDescription: $ and $
         functionEvaluators:
-        - rid: 1038
-        - rid: 1039
-        - rid: 1040
-        - rid: 1041
+        - rid: 1042
+        - rid: 1043
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -941,21 +940,24 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Unit
+        nodeIcon: Condition
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 1038
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+        value: 0
+    - rid: 1042
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
+        returnType: 2
+        tempName: Bool
+        functionName: UnitIsEmpowered
+        functionDescription: Monster/Monster Is Empowered
+        functionDynamicDescription: $ $ empowered
+        functionEvaluators:
+        - rid: 1157
+        - rid: 1158
         parentNode:
-          rid: 1037
+          rid: 1041
         parentNodeID: 0
         indent: 0
         presetName: 
@@ -965,18 +967,21 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
-    - rid: 1039
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+        value: 0
+    - rid: 1043
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 0
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
+        returnType: 2
+        tempName: Bool
+        functionName: UnitIsInRegion
+        functionDescription: Region/Unit Is In Region
+        functionDynamicDescription: $ $ region named $
+        functionEvaluators:
+        - rid: 1163
+        - rid: 1164
+        - rid: 1165
         parentNode:
-          rid: 1037
+          rid: 1041
         parentNodeID: 1
         indent: 0
         presetName: 
@@ -984,99 +989,9 @@ MonoBehaviour:
         stringSuffix: 
         nodeIcon: 
         allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: {fileID: 1649265759049038220, guid: 02102f2f786a49d418694911eea0f16f, type: 3}
-    - rid: 1040
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1037
-        parentNodeID: 2
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Enemy
-        options:
-        - Player
-        - Enemy
-        - Other
-    - rid: 1041
-      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Location
-        functionName: RandomPointNearUnit
-        functionDescription: Random/Random Point Near Unit
-        functionDynamicDescription: Random point within $ of $
-        functionEvaluators:
-        - rid: 1042
-        - rid: 1043
-        parentNode:
-          rid: 1037
-        parentNodeID: 3
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {x: 0, y: 0, z: 0}
-    - rid: 1042
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Range
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: m
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 5
-    - rid: 1043
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: Player
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
+        value: 0
     - rid: 1044
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1716,12 +1631,13 @@ MonoBehaviour:
       data:
         returnType: 2
         tempName: 
-        functionName: UnitIsEmpowered
-        functionDescription: Monster/Monster Is Empowered
-        functionDynamicDescription: $ $ empowered
+        functionName: UnitIsInRegion
+        functionDescription: Region/Unit Is In Region
+        functionDynamicDescription: $ $ region named $
         functionEvaluators:
         - rid: 1074
         - rid: 1075
+        - rid: 1166
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -1729,7 +1645,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Condition
+        nodeIcon: Region
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
@@ -1747,7 +1663,7 @@ MonoBehaviour:
           rid: 1073
         parentNodeID: 0
         indent: 0
-        presetName: Killed Unit
+        presetName: Player
         variableName: 
         stringSuffix: 
         nodeIcon: 
@@ -1775,10 +1691,10 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: Is
+        value: Is In
         options:
-        - Is
-        - Is Not
+        - Is In
+        - Is Not In
     - rid: 1076
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -2547,11 +2463,14 @@ MonoBehaviour:
       data:
         returnType: 2
         tempName: 
-        functionName: DestroyRegions
-        functionDescription: Region/Destroy Regions with Name
-        functionDynamicDescription: Destroy regions named $
+        functionName: SpawnEmpoweredUnits
+        functionDescription: Unit/Spawn/Spawn Empowered Unit(s)
+        functionDynamicDescription: Spawn $ empowered $ for $ faction at $
         functionEvaluators:
         - rid: 1112
+        - rid: 1118
+        - rid: 1119
+        - rid: 1156
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -2559,15 +2478,15 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Region
+        nodeIcon: Unit
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
     - rid: 1112
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: Region Name
+        tempName: 
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -2583,8 +2502,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Tutorial_Blocker
-        options: []
+        value: 1
     - rid: 1113
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -2648,6 +2566,95 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 1
+    - rid: 1116
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DestroyRegions
+        functionDescription: Region/Destroy Regions with Name
+        functionDynamicDescription: Destroy regions named $
+        functionEvaluators:
+        - rid: 1117
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Region
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1117
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Region Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1116
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Tutorial_Blocker
+        options: []
+    - rid: 1118
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1111
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: {fileID: 1649265759049038220, guid: 02102f2f786a49d418694911eea0f16f, type: 3}
+    - rid: 1119
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1111
+        parentNodeID: 2
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Enemy
+        options:
+        - Player
+        - Enemy
+        - Other
     - rid: 1120
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -3440,6 +3447,74 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 32
+    - rid: 1156
+      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Location
+        functionName: RandomPointNearPoint
+        functionDescription: Random/Random Point Near Point
+        functionDynamicDescription: Random point within $ of $
+        functionEvaluators:
+        - rid: 1161
+        - rid: 1162
+        parentNode:
+          rid: 1111
+        parentNodeID: 3
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {x: 3.75, y: -2.5, z: 20}
+    - rid: 1157
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: Killed Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 1158
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Is
+        options:
+        - Is
+        - Is Not
     - rid: 1159
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
@@ -3483,3 +3558,134 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 1
+    - rid: 1161
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Range
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: m
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 3
+    - rid: 1162
+      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Location
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {x: 3.75, y: -2.5, z: 20}
+    - rid: 1163
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: Killed Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 1164
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Is In
+        options:
+        - Is In
+        - Is Not In
+    - rid: 1165
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Region Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Tutorial_Area
+        options: []
+    - rid: 1166
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Region Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1073
+        parentNodeID: 2
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Tutorial_Area
+        options: []

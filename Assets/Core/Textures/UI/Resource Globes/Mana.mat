@@ -9,6 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Mana
   m_Shader: {fileID: 4800000, guid: 9749b72c49b65654990e29c7bfcf885c, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - ETC1_EXTERNAL_ALPHA
   m_InvalidKeywords: []
@@ -18,6 +20,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -152,7 +155,7 @@ Material:
     - _DisplacementPack_ValueY_1: 0.2
     - _DstBlend: 0
     - _FadeToAlpha_Fade_1: 0.513
-    - _Fill: 0.49
+    - _Fill: 0.5
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -179,12 +182,13 @@ Material:
     - AccentGlobeColor: {r: 1, g: 1, b: 1, a: 1}
     - EdgeGlobeColor: {r: 1, g: 1, b: 1, a: 1}
     - MainGlobeColor: {r: 0.8867924, g: 0.15477037, b: 0.15477037, a: 1}
-    - _AccentGlobeColor: {r: 1, g: 1, b: 1, a: 1}
+    - _AccentGlobeColor: {r: 0.5098039, g: 0.49999988, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EdgeGlobeColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EdgeGlobeColor: {r: 0.50980395, g: 0.49411768, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _MainGlobeColor: {r: 0.607429, g: 0.21568625, b: 0.83137256, a: 1}
+    - _MainGlobeColor: {r: 0.56764346, g: 0.16, b: 0.8, a: 1}
     - _TintRGBA_Color_1: {r: 0.24528302, g: 0.82116497, b: 0.9811321, a: 1}
     - _TintRGBA_Color_2: {r: 1, g: 0.007843138, b: 0, a: 1}
     - _TintRGBA_Color_3: {r: 0.6037736, g: 0.4453882, b: 0.26486292, a: 0.972549}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

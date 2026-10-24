@@ -24,7 +24,7 @@ MonoBehaviour:
   abilityCooldown: 1.5
   abilityCost: 0
   movementLock: 1
-  animationActivationPosition: 0.5
+  animationActivationPosition: 0.2
   canMoveWhileCasting: 0
   hasSpecificCastTime: 0
   cooldownIsAtackSpeed: 1
@@ -32,8 +32,8 @@ MonoBehaviour:
   requiresLineOfSight: 0
   canUpdateTargetWhileCasting: 1
   castAtClosestPointInRange: 1
-  castCompleteSound: {fileID: 0}
-  castCompleteSoundVolume: 1
+  castCompleteSound: {fileID: 8300000, guid: 323e15cfe809e114ab92c9f4b25e8bc2, type: 3}
+  castCompleteSoundVolume: 0.34
   needsReminderFlash: 0
   isUnlocked: 1
   abilityTag: 
@@ -438,24 +438,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0
-    - rid: 6501860100278321231
-      type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
-      data:
-        scripts:
-        - scriptName: Cast Completed
-          scriptUID: 75227677
-          hasWait: 0
-          reportErrors: 1
-          eventNodes:
-          - rid: 6501860100278321232
-          conditionNodes: []
-          actionNodes:
-          - rid: 6501860100278321233
-          - rid: 1005
-          - rid: 1000
-          - rid: 1007
-          - rid: 1011
-    - rid: 6501860100278321232
+    - rid: 1018
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -481,6 +464,23 @@ MonoBehaviour:
         - Casting Unit
         - Ability Target Location
         - Target Unit
+    - rid: 6501860100278321231
+      type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
+      data:
+        scripts:
+        - scriptName: Cast Completed
+          scriptUID: 75227677
+          hasWait: 0
+          reportErrors: 1
+          eventNodes:
+          - rid: 1018
+          conditionNodes: []
+          actionNodes:
+          - rid: 6501860100278321233
+          - rid: 1005
+          - rid: 1000
+          - rid: 1007
+          - rid: 1011
     - rid: 6501860100278321233
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:

@@ -23,15 +23,13 @@ MonoBehaviour:
       conditionNodes: []
       actionNodes:
       - rid: 1022
-      - rid: 1034
     - scriptName: Jump Start
       scriptUID: 698932372
       hasWait: 0
       reportErrors: 1
       eventNodes:
       - rid: 1000
-      conditionNodes:
-      - rid: 1040
+      conditionNodes: []
       actionNodes:
       - rid: 1002
     - scriptName: Jump End
@@ -53,28 +51,10 @@ MonoBehaviour:
       - rid: 1025
       actionNodes:
       - rid: 1012
+      - rid: 1027
       - rid: 1018
       - rid: 1015
       - rid: 1020
-      - rid: 1027
-    - scriptName: DisableJump
-      scriptUID: 1671971182
-      hasWait: 0
-      reportErrors: 1
-      eventNodes:
-      - rid: 1032
-      conditionNodes: []
-      actionNodes:
-      - rid: 1037
-    - scriptName: EnableJump
-      scriptUID: 503804043
-      hasWait: 0
-      reportErrors: 1
-      eventNodes:
-      - rid: 1030
-      conditionNodes: []
-      actionNodes:
-      - rid: 1042
   references:
     version: 2
     RefIds:
@@ -125,7 +105,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: JumpArea
+        value: EnableJump
         options: []
     - rid: 1002
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
@@ -260,9 +240,9 @@ MonoBehaviour:
       data:
         returnType: 2
         tempName: 
-        functionName: UnitExitsRegion
-        functionDescription: Region/Unit leaves region
-        functionDynamicDescription: 'Unit leaves region named $ (Presets: <color=yellow>Triggering
+        functionName: UnitEntersRegion
+        functionDescription: Region/Unit enters region
+        functionDynamicDescription: 'Unit enters region named $ (Presets: <color=yellow>Triggering
           Unit</color>, <color=yellow>Unique Region ID</color>)'
         functionEvaluators:
         - rid: 1009
@@ -300,7 +280,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: JumpArea
+        value: DisableJump
         options: []
     - rid: 1010
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
@@ -347,7 +327,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: JumpArea
+        value: EnableJump
         options: []
     - rid: 1012
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
@@ -456,7 +436,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Try using your jump ability to get down to it!
+        value: Try using your jump ability (T) to get down to it!
         options: []
     - rid: 1017
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
@@ -737,339 +717,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0
-    - rid: 1030
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: UnitEntersRegion
-        functionDescription: Region/Unit enters region
-        functionDynamicDescription: 'Unit enters region named $ (Presets: <color=yellow>Triggering
-          Unit</color>, <color=yellow>Unique Region ID</color>)'
-        functionEvaluators:
-        - rid: 1031
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Region
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        presets:
-        - Triggering Unit
-        - Unique Region ID
-    - rid: 1031
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Region Name
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1030
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: EnableJump
-        options: []
-    - rid: 1032
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: UnitEntersRegion
-        functionDescription: Region/Unit enters region
-        functionDynamicDescription: 'Unit enters region named $ (Presets: <color=yellow>Triggering
-          Unit</color>, <color=yellow>Unique Region ID</color>)'
-        functionEvaluators:
-        - rid: 1033
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Region
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        presets:
-        - Triggering Unit
-        - Unique Region ID
-    - rid: 1033
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Region Name
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1032
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: DisableJump
-        options: []
-    - rid: 1034
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: SetBoolVariable
-        functionDescription: Variables/Set Bool Variable
-        functionDynamicDescription: Set script bool variable named $ to $
-        functionEvaluators:
-        - rid: 1035
-        - rid: 1036
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Variable
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 1035
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1034
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: JumpEnabled
-        options: []
-    - rid: 1036
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Bool
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1034
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 1
-    - rid: 1037
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: SetBoolVariable
-        functionDescription: Variables/Set Bool Variable
-        functionDynamicDescription: Set script bool variable named $ to $
-        functionEvaluators:
-        - rid: 1038
-        - rid: 1039
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Variable
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 1038
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1037
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: JumpEnabled
-        options: []
-    - rid: 1039
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Bool
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1037
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 1040
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: GetBoolVariable
-        functionDescription: Variable/Bool Variable
-        functionDynamicDescription: 'Bool Variable: $'
-        functionEvaluators:
-        - rid: 1041
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Condition
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 1041
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1040
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: JumpEnabled
-        options: []
-    - rid: 1042
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: SetBoolVariable
-        functionDescription: Variables/Set Bool Variable
-        functionDynamicDescription: Set script bool variable named $ to $
-        functionEvaluators:
-        - rid: 1043
-        - rid: 1044
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Variable
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 1043
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1042
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: JumpEnabled
-        options: []
-    - rid: 1044
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Bool
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1042
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 1
     - rid: 2789138175007916295
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
