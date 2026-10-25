@@ -10,33 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6688e2940d1ee64894af667a197af7e, type: 3}
-  m_Name: Shadow Walk
+  m_Name: Step of the Wind
   m_EditorClassIdentifier: 
-  buffDescription: 'Attack speed increased by 30%. '
+  buffDescription: 'Movement speed increased by 30%. '
   buffFlavourText: 
   buffTag: 
   buffIcon: {fileID: 21300000, guid: 7e5b9a5dea307ab4d9aad2a277180fb3, type: 3}
   buffType: 0
-  buffRemovedOnDeath: 1
+  buffRemovedOnDeath: 0
   buffVisibleInUI: 1
-  buffHasDuration: 1
+  buffHasDuration: 0
   addingStacksRefreshesDuration: 1
   buffCurrentDuration: 0
-  buffMaxDuration: 3
+  buffMaxDuration: 0
   buffCurrentStacks: 1
   buffMaximumStacks: 1
   buffEffectOnTarget: {fileID: 0}
   buffAttachPoint: Cast Point
   buffScale: 0
   buffStatBonuses:
-  - stat: 3
+  - stat: 6
     modifier:
       Value: 0.3
-      RemoveAt: 845.6879
+      RemoveAt: 16.23618
       IsPercentage: 1
       Label: 
       Stacks: 1
-  visualEffect: {fileID: 0}
+  visualEffect: {fileID: 2482219634389162924, guid: 2adb42af5cd22c34e8df4b8b4e8fd66c, type: 3}
   owner: {fileID: 0}
   applier: {fileID: 0}
   engine:

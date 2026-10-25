@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
   m_Name: Lifedrinker
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  itemDescription: Dagger
+  itemDescription: 
   itemTag: Shadow
   itemFlavourText: 
   classRequirement: 
@@ -24,37 +24,37 @@ MonoBehaviour:
   randomStatCount: 2
   guaranteedStats:
   - stat: 3
-    minimum: 0.03
-    maximum: 0.05
+    minimum: 0.1
+    maximum: 0.15
     isPercent: 1
   - stat: 11
-    minimum: 0.03
-    maximum: 0.04
+    minimum: 0.15
+    maximum: 0.2
     isPercent: 0
   - stat: 10
-    minimum: 0.02
-    maximum: 0.05
+    minimum: 0.1
+    maximum: 0.15
     isPercent: 0
   randomisableStats:
   - stat: 9
-    minimum: 0.02
-    maximum: 0.02
+    minimum: 0.1
+    maximum: 0.12
     isPercent: 1
   - stat: 7
-    minimum: 0.02
-    maximum: 0.02
+    minimum: 0.1
+    maximum: 0.12
     isPercent: 1
   - stat: 0
-    minimum: 0.02
-    maximum: 0.03
+    minimum: 0.1
+    maximum: 0.13
     isPercent: 1
   - stat: 8
-    minimum: 0.02
-    maximum: 0.03
+    minimum: 0.1
+    maximum: 0.13
     isPercent: 1
   - stat: 0
-    minimum: 2
-    maximum: 2
+    minimum: 20
+    maximum: 25
     isPercent: 0
   minimumDropLevel: 10
   canPurchaseInShop: 1
@@ -68,10 +68,9 @@ MonoBehaviour:
       reportErrors: 1
       eventNodes:
       - rid: 6501860414014619742
-      conditionNodes:
-      - rid: 1000
+      conditionNodes: []
+      actionNodes:
       - rid: 1003
-      actionNodes: []
     - scriptName: Item Unequipped
       scriptUID: 105340869
       hasWait: 0
@@ -79,23 +78,25 @@ MonoBehaviour:
       eventNodes:
       - rid: 6501860414014619743
       conditionNodes: []
-      actionNodes: []
+      actionNodes:
+      - rid: 1000
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
     - rid: 1000
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: PlayerHasItemEquipped
-        functionDescription: Player/Player Has Item Equipped
-        functionDynamicDescription: Player $ $ equipped
+        functionName: ReplaceAbilityOnUnit
+        functionDescription: Unit/Ability/Replace Ability
+        functionDynamicDescription: Replace $ with $ on $
         functionEvaluators:
         - rid: 1001
         - rid: 1002
+        - rid: 1007
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -103,16 +104,15 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Condition
+        nodeIcon: Unit
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0
     - rid: 1001
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: 
+        tempName: Ability
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -126,17 +126,14 @@ MonoBehaviour:
         stringSuffix: 
         nodeIcon: 
         allowValue: 1
-        allowPreset: 0
+        allowPreset: 1
         allowFunction: 0
-        value: Has
-        options:
-        - Has
-        - Does Not Have
+        value: {fileID: 11400000, guid: 2ce892a0cfb52744a97e215db616370a, type: 2}
     - rid: 1002
-      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
+      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 4
-        tempName: Item
+        returnType: 0
+        tempName: Ability
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -145,25 +142,26 @@ MonoBehaviour:
           rid: 1000
         parentNodeID: 1
         indent: 0
-        presetName: This Item
+        presetName: 
         variableName: 
         stringSuffix: 
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 11400000, guid: f77132c3934126944a0f0f7c0a836c76, type: 2}
+        allowFunction: 0
+        value: {fileID: 11400000, guid: 479009aeb56a8264baa1ac5d56716772, type: 2}
     - rid: 1003
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: PlayerHasItemEquipped
-        functionDescription: Player/Player Has Item Equipped
-        functionDynamicDescription: Player $ $ equipped
+        functionName: ReplaceAbilityOnUnit
+        functionDescription: Unit/Ability/Replace Ability
+        functionDynamicDescription: Replace $ with $ on $
         functionEvaluators:
         - rid: 1004
         - rid: 1005
+        - rid: 1006
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -171,16 +169,15 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Condition
+        nodeIcon: Unit
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0
     - rid: 1004
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: 
+        tempName: Ability
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -194,17 +191,14 @@ MonoBehaviour:
         stringSuffix: 
         nodeIcon: 
         allowValue: 1
-        allowPreset: 0
+        allowPreset: 1
         allowFunction: 0
-        value: Has
-        options:
-        - Has
-        - Does Not Have
+        value: {fileID: 11400000, guid: 479009aeb56a8264baa1ac5d56716772, type: 2}
     - rid: 1005
-      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
+      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: Item
+        tempName: Ability
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -219,8 +213,50 @@ MonoBehaviour:
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
+        allowFunction: 0
+        value: {fileID: 11400000, guid: 2ce892a0cfb52744a97e215db616370a, type: 2}
+    - rid: 1006
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1003
+        parentNodeID: 2
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
         allowFunction: 1
-        value: {fileID: 11400000, guid: 4eb655a1b9dc747478c44475b9a5eef0, type: 2}
+        value: {fileID: 0}
+    - rid: 1007
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1000
+        parentNodeID: 2
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
     - rid: 6501860414014619742
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:

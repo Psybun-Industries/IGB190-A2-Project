@@ -220,7 +220,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 11
+        value: 8
     - rid: 1005
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -285,7 +285,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 9999
+        value: 500
     - rid: 1008
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1384,7 +1384,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 6
+        value: 5
     - rid: 1062
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1426,7 +1426,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 7
+        value: 5
     - rid: 1064
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1468,7 +1468,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 8
+        value: 5
     - rid: 1066
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:

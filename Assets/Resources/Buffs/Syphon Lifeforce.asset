@@ -1,0 +1,157 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6688e2940d1ee64894af667a197af7e, type: 3}
+  m_Name: Syphon Lifeforce
+  m_EditorClassIdentifier: Assembly-CSharp::Buff
+  buffDescription: Restore 10 health to the player every second.
+  buffFlavourText: 
+  buffTag: 
+  buffIcon: {fileID: 21300000, guid: 8e7baf79a2c165045af45603a5dee6c4, type: 3}
+  buffType: 0
+  buffRemovedOnDeath: 0
+  buffVisibleInUI: 1
+  buffHasDuration: 0
+  addingStacksRefreshesDuration: 1
+  buffCurrentDuration: 0
+  buffMaxDuration: 10.1
+  buffCurrentStacks: 1
+  buffMaximumStacks: 1
+  buffEffectOnTarget: {fileID: 0}
+  buffAttachPoint: Cast Point
+  buffScale: 0
+  buffStatBonuses: []
+  visualEffect: {fileID: 0}
+  owner: {fileID: 0}
+  applier: {fileID: 0}
+  engine:
+    scripts:
+    - scriptName: Main
+      scriptUID: 946464935
+      hasWait: 0
+      reportErrors: 1
+      eventNodes:
+      - rid: 6979793837001277516
+      conditionNodes: []
+      actionNodes:
+      - rid: 6979793837001277517
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 6979793837001277516
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: OnTimerFinished
+        functionDescription: Time/Do every X Seconds
+        functionDynamicDescription: Every $ seconds
+        functionEvaluators:
+        - rid: 6979793837001277518
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 6979793837001277517
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: AddHealthToUnits
+        functionDescription: Unit/Resources/Add Health to Unit(s)
+        functionDynamicDescription: Add $ health to $
+        functionEvaluators:
+        - rid: 6979793837001277519
+        - rid: 6979793837001277520
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 6979793837001277518
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 6979793837001277516
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 6979793837001277519
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 6979793837001277517
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 10
+    - rid: 6979793837001277520
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit(s)
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 6979793837001277517
+        parentNodeID: 1
+        indent: 0
+        presetName: Buff Owner
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        allowSingleUnit: 0

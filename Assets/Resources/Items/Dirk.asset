@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   itemDescription: 
   itemTag: 
-  itemFlavourText: 
+  itemFlavourText: A common dagger
   classRequirement: 
   itemIcon: {fileID: 21300000, guid: 63bbf1e1658caa346b0e6300b0209f45, type: 3}
   itemType: 2

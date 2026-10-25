@@ -13,37 +13,57 @@ MonoBehaviour:
   m_Name: Sneakers
   m_EditorClassIdentifier: Assembly-CSharp::Item
   itemDescription: 
-  itemTag: Shadow
+  itemTag: 
   itemFlavourText: 
   classRequirement: 
   itemIcon: {fileID: 21300000, guid: 87a6ace052badc94890297eb1f920c27, type: 3}
   itemType: 4
-  itemRarity: 2
-  itemCost: 0
+  itemRarity: 0
+  itemCost: 100
   itemSet: {fileID: 0}
-  randomStatCount: 0
+  randomStatCount: 1
   guaranteedStats: []
-  randomisableStats: []
-  minimumDropLevel: 10
+  randomisableStats:
+  - stat: 1
+    minimum: 0.01
+    maximum: 0.03
+    isPercent: 1
+  - stat: 7
+    minimum: 0.01
+    maximum: 0.02
+    isPercent: 1
+  - stat: 9
+    minimum: 0.01
+    maximum: 0.03
+    isPercent: 1
+  - stat: 6
+    minimum: 0.01
+    maximum: 0.03
+    isPercent: 1
+  - stat: 1
+    minimum: 1
+    maximum: 2
+    isPercent: 0
+  minimumDropLevel: 0
   canPurchaseInShop: 1
   canDropOffMonster: 1
   template: {fileID: 0}
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 1751053304
+      scriptUID: 1379408833
       hasWait: 0
       reportErrors: 1
       eventNodes:
-      - rid: 5603467790985986058
+      - rid: 6501860414014619740
       conditionNodes: []
       actionNodes: []
     - scriptName: Item Unequipped
-      scriptUID: 1959444667
+      scriptUID: 340435725
       hasWait: 0
       reportErrors: 1
       eventNodes:
-      - rid: 5603467790985986059
+      - rid: 6501860414014619741
       conditionNodes: []
       actionNodes: []
   references:
@@ -51,7 +71,7 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 5603467790985986058
+    - rid: 6501860414014619740
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -72,7 +92,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 5603467790985986059
+    - rid: 6501860414014619741
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2

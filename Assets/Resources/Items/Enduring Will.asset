@@ -20,42 +20,42 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: e06257c2995c8734385304e0bf75528f, type: 3}
   itemType: 3
   itemRarity: 2
-  itemCost: 300
+  itemCost: 400
   itemSet: {fileID: 0}
   randomStatCount: 2
   guaranteedStats:
   - stat: 1
-    minimum: 3
-    maximum: 4
+    minimum: 20
+    maximum: 25
     isPercent: 0
   - stat: 1
-    minimum: 0.03
-    maximum: 0.05
+    minimum: 0.15
+    maximum: 0.2
     isPercent: 1
   - stat: 4
-    minimum: 0.02
-    maximum: 0.04
+    minimum: 0.15
+    maximum: 0.2
     isPercent: 1
   randomisableStats:
   - stat: 4
-    minimum: 2
-    maximum: 3
+    minimum: 20
+    maximum: 25
     isPercent: 0
   - stat: 5
-    minimum: 3
-    maximum: 5
+    minimum: 30
+    maximum: 40
     isPercent: 0
   - stat: 8
-    minimum: 0.03
-    maximum: 0.05
+    minimum: 0.15
+    maximum: 0.2
     isPercent: 1
   - stat: 12
-    minimum: 2
-    maximum: 3
+    minimum: 20
+    maximum: 25
     isPercent: 0
   - stat: 12
-    minimum: 0.02
-    maximum: 0.04
+    minimum: 0.15
+    maximum: 0.2
     isPercent: 1
   minimumDropLevel: 10
   canPurchaseInShop: 1
@@ -69,8 +69,7 @@ MonoBehaviour:
       reportErrors: 1
       eventNodes:
       - rid: 6501860414014619738
-      conditionNodes:
-      - rid: 1000
+      conditionNodes: []
       actionNodes: []
     - scriptName: Item Unequipped
       scriptUID: 1631907341
@@ -85,74 +84,6 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 1000
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: PlayerHasItemEquipped
-        functionDescription: Player/Player Has Item Equipped
-        functionDynamicDescription: Player $ $ equipped
-        functionEvaluators:
-        - rid: 1001
-        - rid: 1002
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Condition
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 1001
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1000
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Has
-        options:
-        - Has
-        - Does Not Have
-    - rid: 1002
-      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Item
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1000
-        parentNodeID: 1
-        indent: 0
-        presetName: This Item
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 11400000, guid: f77132c3934126944a0f0f7c0a836c76, type: 2}
     - rid: 6501860414014619738
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
