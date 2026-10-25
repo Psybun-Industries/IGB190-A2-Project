@@ -1,0 +1,349 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6688e2940d1ee64894af667a197af7e, type: 3}
+  m_Name: Stab Bleed
+  m_EditorClassIdentifier: Assembly-CSharp::Buff
+  buffDescription: Causes unit to take 10% attack damage for 5 seconds
+  buffFlavourText: 
+  buffTag: 
+  buffIcon: {fileID: 21300000, guid: 5c06d58fe97ebfb40ad16877f1488733, type: 3}
+  buffType: 0
+  buffRemovedOnDeath: 0
+  buffVisibleInUI: 1
+  buffHasDuration: 1
+  addingStacksRefreshesDuration: 1
+  buffCurrentDuration: 0
+  buffMaxDuration: 2
+  buffCurrentStacks: 1
+  buffMaximumStacks: 1
+  buffEffectOnTarget: {fileID: 0}
+  buffAttachPoint: Cast Point
+  buffScale: 0
+  buffStatBonuses: []
+  visualEffect: {fileID: 0}
+  owner: {fileID: 0}
+  applier: {fileID: 0}
+  engine:
+    scripts:
+    - scriptName: Visual
+      scriptUID: 1443556736
+      hasWait: 0
+      reportErrors: 1
+      eventNodes:
+      - rid: 1267833134627422289
+      conditionNodes: []
+      actionNodes:
+      - rid: 1267833134627422290
+    - scriptName: Damage
+      scriptUID: 1579618203
+      hasWait: 0
+      reportErrors: 1
+      eventNodes:
+      - rid: 1267833134627422291
+      conditionNodes: []
+      actionNodes:
+      - rid: 1267833134627422292
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 1267833134627422289
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: BuffApplied
+        functionDescription: Buff/Buff is applied to unit
+        functionDynamicDescription: 'Buff is applied to unit (Presets: <color=yellow>Buff
+          Applier</color>, <color=yellow>Buff Target</color>, <color=yellow>Triggering
+          Buff</color>, <color=yellow>Buff Stacks</color>)'
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Event
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Buff Applier
+        - Buff Target
+        - Triggering Buff
+        - Buff Stacks
+    - rid: 1267833134627422290
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SpawnEffectOnUnitGroup
+        functionDescription: Feedback/Play Effect on Unit(s)
+        functionDynamicDescription: $ $ effect on $ for $ at $ scale
+        functionEvaluators:
+        - rid: 1267833134627422293
+        - rid: 1267833134627422294
+        - rid: 1267833134627422295
+        - rid: 1267833134627422296
+        - rid: 1267833134627422297
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Effect
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1267833134627422291
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: OnTimerFinished
+        functionDescription: Time/Do every X Seconds
+        functionDynamicDescription: Every $ seconds
+        functionEvaluators:
+        - rid: 1267833134627422298
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 1267833134627422292
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: HaveUnitDamageUnits
+        functionDescription: Unit/Combat/Have Unit Deal Damage to Unit(s)
+        functionDynamicDescription: Have $ Deal $ attack damage to $
+        functionEvaluators:
+        - rid: 1267833134627422299
+        - rid: 1267833134627422300
+        - rid: 1267833134627422301
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1267833134627422293
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1267833134627422290
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Play
+        options:
+        - Play
+        - Stop
+        - Play Or Refresh
+    - rid: 1267833134627422294
+      type: {class: EffectNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Effect
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1267833134627422290
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 3980578567638507700, guid: ecfbe15825099fe43a58b8670c1e83da, type: 3}
+    - rid: 1267833134627422295
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit(s)
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1267833134627422290
+        parentNodeID: 2
+        indent: 0
+        presetName: Buff Target
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        allowSingleUnit: 0
+    - rid: 1267833134627422296
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1267833134627422290
+        parentNodeID: 3
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: s
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 1267833134627422297
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1267833134627422290
+        parentNodeID: 4
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: x
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 1267833134627422298
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1267833134627422291
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 1267833134627422299
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1267833134627422292
+        parentNodeID: 0
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 1267833134627422300
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1267833134627422292
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: '%'
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 10
+    - rid: 1267833134627422301
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit(s)
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1267833134627422292
+        parentNodeID: 2
+        indent: 0
+        presetName: Buff Owner
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        allowSingleUnit: 0
