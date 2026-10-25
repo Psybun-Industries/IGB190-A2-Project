@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ba5be5e9a4ad5d49a4183e2e4440724, type: 3}
-  m_Name: Lifesteal
+  m_Name: Lifedrain
   m_EditorClassIdentifier: 
   engine:
     rid: 5603467795203620940

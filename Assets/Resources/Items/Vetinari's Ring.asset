@@ -21,7 +21,7 @@ MonoBehaviour:
   itemRarity: 2
   itemCost: 250
   itemSet: {fileID: 0}
-  randomStatCount: 0
+  randomStatCount: 2
   guaranteedStats:
   - stat: 3
     minimum: 0.2
@@ -58,7 +58,6 @@ MonoBehaviour:
       - rid: 5603467790985986062
       conditionNodes: []
       actionNodes:
-      - rid: 1000
       - rid: 1002
     - scriptName: Item Unequipped
       scriptUID: 873804500
@@ -73,50 +72,6 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 1000
-      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: DoActionsIfBool
-        functionDescription: Flow/If Statement
-        functionDynamicDescription: Do actions if $
-        functionEvaluators:
-        - rid: 1001
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Condition
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 1001
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: Bool
-        functionName: PlayerHasItemEquipped
-        functionDescription: Player/Player Has Item Equipped
-        functionDynamicDescription: Player $ $ equipped
-        functionEvaluators:
-        - rid: 1004
-        - rid: 1005
-        parentNode:
-          rid: 1000
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
     - rid: 1002
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -160,52 +115,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 11400000, guid: 279a065eb5b7ffb4398af134ca8db42c, type: 2}
-    - rid: 1004
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Has
-        options:
-        - Has
-        - Does Not Have
-    - rid: 1005
-      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Item
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: This Item
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 11400000, guid: f77132c3934126944a0f0f7c0a836c76, type: 2}
+        value: {fileID: 11400000, guid: ef6e89ac51ea83046a06f2dbbc1525e1, type: 2}
     - rid: 1006
       type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
       data:
