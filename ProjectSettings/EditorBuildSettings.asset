@@ -8,10 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CharacterSelect.unity
     guid: 630090f9bede6554b94254e000794664
+  - enabled: 1
+    path: Assets/Scenes/Level_1.unity
+    guid: b050d173b77153548a6b53703899844c
   - enabled: 0
     path: Assets/Scenes/Prologue.unity
     guid: f455b3b4fbaa13f4d8022834791db7ad
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0

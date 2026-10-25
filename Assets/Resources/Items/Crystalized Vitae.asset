@@ -14,16 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   itemDescription: 
   itemTag: Shadow
-  itemFlavourText: 
+  itemFlavourText: Crystalized blood taken from an elder god.
   classRequirement: 
   itemIcon: {fileID: 21300000, guid: dec0e5c63c493a445bae12790f311f74, type: 3}
   itemType: 1
   itemRarity: 2
-  itemCost: 0
+  itemCost: 300
   itemSet: {fileID: 0}
   randomStatCount: 0
-  guaranteedStats: []
-  randomisableStats: []
+  guaranteedStats:
+  - stat: 5
+    minimum: 20
+    maximum: 25
+    isPercent: 0
+  randomisableStats:
+  - stat: 5
+    minimum: 0.15
+    maximum: 0.2
+    isPercent: 1
+  - stat: 7
+    minimum: 0.15
+    maximum: 0.2
+    isPercent: 1
   minimumDropLevel: 10
   canPurchaseInShop: 1
   canDropOffMonster: 1
@@ -37,7 +49,8 @@ MonoBehaviour:
       eventNodes:
       - rid: 5603467790985986050
       conditionNodes: []
-      actionNodes: []
+      actionNodes:
+      - rid: 1000
     - scriptName: Item Unequipped
       scriptUID: 3569250
       hasWait: 0
@@ -51,6 +64,163 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 1000
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: AddAbilityCostModifierToUnit
+        functionDescription: Unit/Ability/Add Cost Modifier to Ability
+        functionDynamicDescription: '$ cost of $ on $ by $ (Buff Name: $ | Max Stacks:
+          $)'
+        functionEvaluators:
+        - rid: 1001
+        - rid: 1002
+        - rid: 1003
+        - rid: 1004
+        - rid: 1005
+        - rid: 1006
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1001
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1000
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 0
+        value: Decrease
+        options:
+        - Increase
+        - Decrease
+    - rid: 1002
+      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Ability
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1000
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 0
+        value: {fileID: 11400000, guid: 8141c6b1981cc4c42a471c450bddad98, type: 2}
+    - rid: 1003
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1000
+        parentNodeID: 2
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 1004
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1000
+        parentNodeID: 3
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: '%'
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 15
+    - rid: 1005
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1000
+        parentNodeID: 4
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: None
+        options: []
+    - rid: 1006
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1000
+        parentNodeID: 5
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
     - rid: 5603467790985986050
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:

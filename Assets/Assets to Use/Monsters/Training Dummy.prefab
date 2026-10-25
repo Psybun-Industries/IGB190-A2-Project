@@ -61,7 +61,7 @@ MonoBehaviour:
   baseAttacksPerSecond: 2
   baseMaxHealth: 10000
   baseMaxResource: 100
-  baseMovementSpeed: 1
+  baseMovementSpeed: 0
   baseArmor: 0
   baseCriticalStrikeChance: 0
   baseCriticalStrikeDamage: 2
@@ -133,8 +133,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.3
-  m_Speed: 1
-  m_Acceleration: 8
+  m_Speed: 0
+  m_Acceleration: 0
   avoidancePriority: 50
   m_AngularSpeed: 720
   m_StoppingDistance: 1
@@ -152,10 +152,10 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627997101623789007}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -182,7 +182,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c7c859a80d5d1514ba52891ff2773968, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: c7c859a80d5d1514ba52891ff2773968, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.1
@@ -674,6 +674,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0

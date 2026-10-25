@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: -2091711783338139730}
   m_Layer: 7
   m_Name: Monster 2
-  m_TagString: Untagged
+  m_TagString: Syphonable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
   outline: {fileID: 0}
   color: {r: 0, g: 0, b: 0, a: 0}
   colorFade: {r: 0, g: 0, b: 0, a: 0}
-  unitName: Monster 2
+  unitName: Undead Peon
   baseDamage: 10
   baseAttacksPerSecond: 1
   baseMaxHealth: 100
@@ -190,13 +190,13 @@ MonoBehaviour:
   goldModifier: 1
   experienceModifier: 1
   corpseDuration: 3.5
-  monsterLabel: 
+  monsterLabel: Undead Peon
   isEmpowered: 0
   healthBarType: 0
   uiSize: 1
   uiHeight: 2
-  spawnLevel: 1
-  spawnLikelihood: 0
+  spawnLevel: 2
+  spawnLikelihood: 3
 --- !u!65 &5207088347721001449
 BoxCollider:
   m_ObjectHideFlags: 0

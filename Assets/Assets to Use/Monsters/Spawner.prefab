@@ -193,7 +193,7 @@ MonoBehaviour:
   outline: {fileID: 0}
   color: {r: 0, g: 0, b: 0, a: 0}
   colorFade: {r: 0, g: 0, b: 0, a: 0}
-  unitName: Spawner
+  unitName: Summoning Pillar
   baseDamage: 40
   baseAttacksPerSecond: 1
   baseMaxHealth: 250
@@ -233,7 +233,7 @@ MonoBehaviour:
   goldModifier: 1
   experienceModifier: 1
   corpseDuration: 0
-  monsterLabel: 
+  monsterLabel: Summoning Pillar
   isEmpowered: 0
   healthBarType: 1
   uiSize: 3
